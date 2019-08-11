@@ -7,8 +7,8 @@ const homeRouter = require("./home");
 const router = new Router();
 
 // 对路由进行处理
-router.get("/login", loginRouter.loginView);
-router.post("/login", loginRouter.login);
+router.get("/login", loginRouter.loginGet);
+router.post("/login", loginRouter.loginPost);
 
 router.get("/session", sessionRouter.sessionCtrlGet);
 router.post("/session", sessionRouter.sessionCtrlPost);
