@@ -28,7 +28,12 @@ const loginPost = async ctx => {
     });
   });
   tokenPromise.then(token => {
-    ctx.response.body = token;
+    ctx.body = JSON.stringify({
+      code: 200,
+      data: {
+        access_token: token
+      }
+    });
     ctx.set("Authorization", "Bearer " + token);
   });
   return tokenPromise;
