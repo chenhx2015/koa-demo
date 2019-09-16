@@ -6,8 +6,8 @@ const crypto = require("crypto");
 
 const sessionCtrlGet = ctx => {
   // 每访问一次，次数就会增加 1
-  let n = 0;
-  let times = n++;
+  let n = ctx.session.view_times || 0;
+  let times = ++n;
   ctx.body = sessionCtrl.sessionGetCtrl(times);
 };
 const sessionCtrlPost = ctx => {
