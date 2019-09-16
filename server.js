@@ -7,7 +7,7 @@ const jwt = require("koa-jwt"); // koa-jwt 与 koa-session 可以二选一，但
 const cors = require("koa2-cors");
 const app = new Koa();
 
-app.keys = ["some secret hurr"];
+app.keys = ["y secret hurr"];
 const CONFIG = {
   key: "koa:sess",
   maxAge: 86400000,
